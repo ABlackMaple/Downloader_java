@@ -2,22 +2,22 @@ package top.blackmaple.core;
 
 import top.blackmaple.constant.Constant;
 
+import java.util.concurrent.atomic.LongAdder;
+
 public class DownloadInfoThread implements Runnable {
 
     // 下载文件大小
     private final long httpFileContentLength;
-    // 下载完成大小
-    public double finishedSize;
 
     // 前1s内累计下载大小
     public double lastSize;
 
     // 当前1s内累计下载大小
-    public volatile double downSize;
+    public LongAdder downSize;
 
     public DownloadInfoThread(long httpFileContentLength) {
         this.httpFileContentLength = httpFileContentLength;
-        downSize = 0;
+        downSize = new LongAdder();
         lastSize = 0;
 
     }
@@ -28,12 +28,12 @@ public class DownloadInfoThread implements Runnable {
         String httpFileSize = String.format("%.2f", this.httpFileContentLength / Constant.MB);
 
         // 下载速度
-        int speed = (int) ((this.downSize - this.lastSize) / 1024);
+        int speed = (int) ((this.downSize.doubleValue() - this.lastSize) / 1024);
         // 更新下载进度
-        this.lastSize = this.downSize;
+        this.lastSize = this.downSize.doubleValue();
 
         // 剩余文件大小
-        double remainSize = this.httpFileContentLength - this.downSize - this.finishedSize;
+        double remainSize = this.httpFileContentLength - this.downSize.doubleValue();
 
         // 剩余时间
         String remainTime = String.format("%.1f", remainSize / speed / 1024);
@@ -43,10 +43,10 @@ public class DownloadInfoThread implements Runnable {
         }
 
         // 下载进度
-        String progress = String.format("%.2f", (this.downSize + this.finishedSize) / Constant.MB);
+        String progress = String.format("%.2f", (this.downSize.doubleValue()) / Constant.MB);
 
         // 下载进度百分比
-        String percent = String.format("%.2f", (this.downSize + this.finishedSize) / this.httpFileContentLength * 100);
+        String percent = String.format("%.2f", (this.downSize.doubleValue()) / this.httpFileContentLength * 100);
 
         // 下载进度条
         StringBuilder progressBar = new StringBuilder();

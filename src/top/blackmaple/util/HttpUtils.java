@@ -10,8 +10,48 @@ import java.net.URL;
 public class HttpUtils {
 
     /**
+     * 获取Http内容长度
+     *
+     * @param url 请求地址
+     * @return 内容长度
+     * @throws Exception 异常
+     */
+    public static long getHttpContentLength(String url) throws Exception {
+        HttpURLConnection connection = null;
+        long contentLength = 0;
+        try {
+            connection = getHttpURLConnection(url);
+            contentLength = connection.getContentLengthLong();
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
+        return contentLength;
+    }
+
+    /**
      * 获取HttpURLConnection
      *
+     * @param url      请求地址
+     * @param startPos 开始位置
+     * @param endPos   结束位置
+     * @return HttpURLConnection
+     * @throws Exception 异常
+     */
+    public static HttpURLConnection getHttpURLConnection(String url, long startPos, long endPos) throws Exception {
+        HttpURLConnection connection = getHttpURLConnection(url);
+        String byteRange = "bytes=" + startPos + "-";
+        if (endPos != 0) {
+            byteRange += endPos;
+        }
+        connection.setRequestProperty("Range", byteRange);
+        return connection;
+    }
+
+
+    /**
+     * 获取HttpURLConnection
      * @param url 请求地址
      * @return HttpURLConnection
      */

@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="802d9751-746f-4524-bf54-6fdbfb8f11b7" name="Changes" comment="Downloader">
-      <changelist_data name="Maple" email="" />
+      <change afterPath="$PROJECT_DIR$/src/top/blackmaple/core/DownloaderTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/blackmaple/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/blackmaple/constant/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/blackmaple/core/DownloadInfoThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/blackmaple/core/DownloadInfoThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/blackmaple/core/Downloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/blackmaple/core/Downloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/blackmaple/util/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/blackmaple/util/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/blackmaple/util/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/blackmaple/util/HttpUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +96,17 @@
       <option name="presentableId" value="Default" />
       <updated>1713021146476</updated>
       <workItem from="1713021147519" duration="4442000" />
-      <workItem from="1713067706804" duration="7137000" />
+      <workItem from="1713067706804" duration="13449000" />
     </task>
+    <task id="LOCAL-00001" summary="Downloader">
+      <option name="closed" value="true" />
+      <created>1713074937281</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713074937281</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
