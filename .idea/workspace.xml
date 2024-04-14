@@ -6,20 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="802d9751-746f-4524-bf54-6fdbfb8f11b7" name="Changes" comment="Downloader">
       <changelist_data name="Maple" email="" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter_api_5_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Downloador.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/blackmaple/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/blackmaple/constant/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/blackmaple/core/DownloadInfoThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/blackmaple/core/Downloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/blackmaple/util/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/blackmaple/util/HttpUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/blackmaple/util/LogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713021146476</updated>
       <workItem from="1713021147519" duration="4442000" />
-      <workItem from="1713067706804" duration="6505000" />
+      <workItem from="1713067706804" duration="7137000" />
     </task>
     <servers />
   </component>
